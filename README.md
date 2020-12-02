@@ -22,3 +22,5 @@ The next and highest performing model I applied was an XGBoostClassifier, using 
 
 ### 5 - Web Tool
 The next step was to pickle the model make it into a web-app. Going with a GUI approach I've just taken the 4 most important model variables, performing 15% weaker than a model trained on all variables. An improvement would be to create a tool where the user just enters the URL, and the app can request the HTML, scrape all of the data, and predict using all variables.
+
+![Alt text](../images/Screenshot 2020-12-02 at 13.42.39.png?raw=true "Title")
