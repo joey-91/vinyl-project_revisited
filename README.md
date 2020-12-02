@@ -19,3 +19,6 @@ The next thing to try was an ensemble model, with a simple regression score of 3
 I figured this problem could be better modelled as a price range prediction rather than exact value. Having come back to this a few times over the last couple of years with new techniques, I'm now certain I've squeezed every drop out of it. Firstly I built a Neural Network using Keras framework, with 20% drop out at each stage, and early stopping based on validation-loss. This model at it's optimum gives 55.3% accuracy (only 2% higher than my boosted regressor, which made me realise that's actually a very powerful model). 
 
 The next and highest performing model I applied was an XGBoostClassifier, using a Bayesian method for Hyperparameter tuning, i was able to get a further 1.6% model improvement. Again the feature importances were consistent with the other models, and the supply-demand ratio is the most predictive of record price, without this I'd have a much weaker model.
+
+### 5 - Web Tool
+The next step was to pickle the model make it into a web-app. Going with a GUI approach I've just taken the 4 most important model variables, performing 15% weaker than a model trained on all variables. An improvement would be to create a tool where the user just enters the URL, and the app can request the HTML, scrape all of the data, and predict using all variables.
